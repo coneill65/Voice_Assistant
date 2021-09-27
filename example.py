@@ -1,4 +1,4 @@
-from VARCE import CommandManager
+from Command_manager import CommandManager
 import pyttsx3
 
 
