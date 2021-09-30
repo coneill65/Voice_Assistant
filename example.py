@@ -1,19 +1,13 @@
-from Command_manager import CommandManager
-import pyttsx3
+from Command_handler import CommandManager
 
 
-engine = pyttsx3.init(driverName='sapi5')
-engine.setProperty('rate', 150)
-
-
-activation_words = ["voice assistant"]
+activation_words = ["voice assistant", "voice assist", "voice"]
 bot = CommandManager(activation_words)
 
 
 @bot.add_command
 def hello():
-    engine.say("I will speak this text")
-    engine.runAndWait()
+    bot.say("I will speak this text")
 
 
 if __name__ == "__main__":
